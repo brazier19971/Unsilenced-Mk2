@@ -58,6 +58,7 @@
             portNameLabel.Size = new System.Drawing.Size(48, 13);
             portNameLabel.TabIndex = 7;
             portNameLabel.Text = "Set Port:";
+        
             // 
             // startDetection
             // 

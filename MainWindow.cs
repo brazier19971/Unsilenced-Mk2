@@ -84,6 +84,6 @@ namespace UnsilencedMk2
             axWindowsMediaPlayer1.settings.setMode("loop", true);
         }
 
-
+        
     }
 }
