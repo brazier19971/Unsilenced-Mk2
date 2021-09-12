@@ -34,7 +34,6 @@
             this.startDetection = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.portNameComboBox = new System.Windows.Forms.ComboBox();
-            this.serialSettingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.delayInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,11 +42,15 @@
             this.browseAudio = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.aboutBtn = new System.Windows.Forms.ToolStripButton();
+            this.serialSettingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             portNameLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // portNameLabel
@@ -58,11 +61,10 @@
             portNameLabel.Size = new System.Drawing.Size(48, 13);
             portNameLabel.TabIndex = 7;
             portNameLabel.Text = "Set Port:";
-        
             // 
             // startDetection
             // 
-            this.startDetection.Location = new System.Drawing.Point(20, 126);
+            this.startDetection.Location = new System.Drawing.Point(20, 143);
             this.startDetection.Name = "startDetection";
             this.startDetection.Size = new System.Drawing.Size(45, 23);
             this.startDetection.TabIndex = 12;
@@ -72,7 +74,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(71, 126);
+            this.exit.Location = new System.Drawing.Point(71, 143);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(45, 23);
             this.exit.TabIndex = 12;
@@ -90,17 +92,13 @@
             this.portNameComboBox.Size = new System.Drawing.Size(246, 21);
             this.portNameComboBox.TabIndex = 8;
             // 
-            // serialSettingsBindingSource
-            // 
-            this.serialSettingsBindingSource.DataSource = typeof(UnsilencedMk2.Serial.SerialSettings);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.delayInput);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.portNameComboBox);
             this.groupBox1.Controls.Add(portNameLabel);
-            this.groupBox1.Location = new System.Drawing.Point(20, 25);
+            this.groupBox1.Location = new System.Drawing.Point(20, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(339, 84);
             this.groupBox1.TabIndex = 11;
@@ -163,11 +161,36 @@
             this.tsStatus.Size = new System.Drawing.Size(48, 17);
             this.tsStatus.Text = "tsStatus";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutBtn});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(376, 25);
+            this.toolStrip1.TabIndex = 17;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // aboutBtn
+            // 
+            this.aboutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.aboutBtn.Image = ((System.Drawing.Image)(resources.GetObject("aboutBtn.Image")));
+            this.aboutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.aboutBtn.Name = "aboutBtn";
+            this.aboutBtn.Size = new System.Drawing.Size(44, 22);
+            this.aboutBtn.Text = "About";
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
+            // 
+            // serialSettingsBindingSource
+            // 
+            this.serialSettingsBindingSource.DataSource = typeof(UnsilencedMk2.Serial.SerialSettings);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 305);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.browseAudio);
             this.Controls.Add(this.axWindowsMediaPlayer1);
@@ -178,12 +201,14 @@
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Unsilenced Mk2";
-            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +228,8 @@
         public System.Windows.Forms.ToolStripStatusLabel tsStatus;
         public System.Windows.Forms.TextBox delayInput;
         public AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton aboutBtn;
     }
 }
 

@@ -84,6 +84,9 @@ namespace UnsilencedMk2
             axWindowsMediaPlayer1.settings.setMode("loop", true);
         }
 
-        
+        private void aboutBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Unsilenced Mk2 v1.0 2021 Alistair Brazier/Chelmsford IT");
+        }
     }
 }
